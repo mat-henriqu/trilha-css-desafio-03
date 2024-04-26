@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  font-family: Roboto, "sans-serif";
+}
+
+body {
+  display: grid;
+  /* grid-template-columns: repeat(4, 25vw);
+  grid-template-rows: repeat(4, 25vh);
+  grid-template-areas: 
+  "header header header header"   
+  "sidebar section section section" 
+  "sidebar section section section" 
+  "sidebar section section section"; */
+  grid-template:
+    "header header header header" 10vh
+    "sidebar section section section" 30vh
+    "sidebar section section section" 30vh
+    "sidebar section section section" 30vh
+    / .75fr 1fr 1fr 1fr;
+  background-color: #f0f8ff;
+  margin: .1rem;
+  height: 100vh;
+}
+
+
+header {
+  grid-area: header;
+  display: flex;
+  background-color: #fff;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 1em;
+}
+
+.left {
+  display: flex;
+  place-items: center;
+}
+
+.left img {
+  margin: 0 1em;
+}
+
+.center form {
+  display: flex;
+  /*shorthand place-itens : align-items + justify-items*/
+  height: auto;
+
+  border: 0.1em solid #C6CED6;
+  border-radius: 0.25em;
+}
+
+.center form input {
+  border: 0;
+  min-width: 40vw;
+  height: auto;
+  font-size: 1em;
+  outline: 0;
+  text-indent: 1em;
+}
+
+.center form a {
+  display: flex;
+  padding: 0.5em;
+  border-left: 0.1em solid #C6CED6;
+  background-color: #f0f8ff;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+
+}
+
+.right img {
+  margin: 0 1em;
+}
+
+aside {
+  grid-area: sidebar;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: auto;
+  height: auto;
+  padding: 0 1.5em;
+
+  gap: 1.25em;
+  flex-shrink: 0;
+}
+
+aside a {
+  display: flex;
+  text-decoration: none;
+  justify-content: end;
+  align-items: center;
+}
+
+aside img {
+  height: 1.5em;
+  padding: .5em;
+
+}
+
+aside p {
+  line-height: 2em;
+  font-size: .95em;
+  margin: 0 2em;
+  color: #000;
+}
+
+main {
+  grid-area: section;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1.5em;
+  gap: 1em;
+  justify-content: space-evenly;
+}
+
+.content {
+  display: block;
+  flex-direction: column;
+  width: 15em;
+  height: 15rem;
+}
+
+.sidebar-video {
+  margin: 0;
+
+}
+
+.sidebar-video img {
+  width: 100%;
+  margin: 0;
+  border-radius: .35em;
+}
+
+.description {
+  display: flex;
+  place-items: start;
+  margin: .5em;
+  gap: .5em;
+
+}
+
+.info h4 {
+  font-size: .85em;
+  margin: 0 0 .5em;
+}
+
+.info span {
+  font-size: .725em;
+}
